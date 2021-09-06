@@ -1,0 +1,105 @@
+{
+	"active": true,
+	"name": "gps",
+	"steps": [
+		{
+			"id": "scroll_until_visible",
+			"values": {
+				"testableId": "test_page_Map",
+				"increment": "200"
+			}
+		},
+		{
+			"id": "tap",
+			"values": {
+				"testableId": "test_page_Map"
+			}
+		},
+		{
+			"id": "assert_value",
+			"values": {
+				"testableId": "map",
+				"value": [
+					null,
+					null
+				],
+				"equals": "true"
+			}
+		},
+		{
+			"id": "set_location",
+			"values": {
+				"latitude": "28.418684",
+				"longitude": "-81.581202"
+			}
+		},
+		{
+			"id": "tap",
+			"values": {
+				"testableId": "button_my_location"
+			}
+		},
+		{
+			"id": "assert_value",
+			"values": {
+				"testableId": "map",
+				"value": [
+					28.418684,
+					-81.581202
+				],
+				"equals": "true"
+			}
+		},
+		{
+			"id": "set_location_permission",
+			"values": {
+				"permission": "always"
+			}
+		},
+		{
+			"id": "assert_location_permission",
+			"values": {
+				"permission": "always"
+			}
+		},
+		{
+			"id": "set_location_permission",
+			"values": {
+				"permission": "denied"
+			}
+		},
+		{
+			"id": "assert_location_permission",
+			"values": {
+				"permission": "denied"
+			}
+		},
+		{
+			"id": "set_location_permission",
+			"values": {
+				"permission": "deniedForever"
+			}
+		},
+		{
+			"id": "assert_location_permission",
+			"values": {
+				"permission": "deniedForever"
+			}
+		},
+		{
+			"id": "set_location_permission",
+			"values": {
+				"permission": "whileInUse"
+			}
+		},
+		{
+			"id": "assert_location_permission",
+			"values": {
+				"permission": "whileInUse"
+			}
+		}
+	],
+	"suiteName": "gps",
+	"timestamp": 1630957510586,
+	"version": 0
+}
