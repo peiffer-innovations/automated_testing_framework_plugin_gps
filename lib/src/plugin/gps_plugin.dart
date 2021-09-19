@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:automated_testing_framework/automated_testing_framework.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
 
 /// Plugin that allows for the simulation of testing with different locations
 /// without having to actually move the device.  This also allows testing on
