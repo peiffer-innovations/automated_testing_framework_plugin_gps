@@ -113,7 +113,7 @@ class GpsPlugin with WidgetsBindingObserver {
         if (_locationSubscription == null && _overriddenLocation == null) {
           _locationSubscription =
               Geolocator.getPositionStream().listen((position) {
-            if (_overriddenLocation != null) {
+            if (_overriddenLocation == null) {
               _locationStreamController?.add(position);
             }
           });
@@ -189,7 +189,7 @@ class GpsPlugin with WidgetsBindingObserver {
     await _locationSubscription?.cancel();
 
     _locationSubscription = Geolocator.getPositionStream().listen((position) {
-      if (_overriddenLocation != null) {
+      if (_overriddenLocation == null) {
         _locationStreamController?.add(position);
       }
     });
