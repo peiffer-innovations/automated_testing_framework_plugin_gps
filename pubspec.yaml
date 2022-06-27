@@ -12,7 +12,7 @@ dependencies:
   flutter: 
     sdk: 'flutter'
   form_validation: '^2.1.0+6'
-  geolocator: '^8.2.1'
+  geolocator: ">=8.2.1 <10.0.0"
   json_class: '^2.1.2+6'
   logging: '^1.0.2'
   static_translations: '^2.1.1+3'
