@@ -90,8 +90,8 @@ class _MapPageState extends State<MapPage> {
                 center: LatLng(28.375891, -81.549410),
                 zoom: 15.0,
               ),
-              layers: [
-                TileLayerOptions(
+              children: [
+                TileLayer(
                   urlTemplate:
                       'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                   subdomains: [
@@ -100,7 +100,7 @@ class _MapPageState extends State<MapPage> {
                     'c',
                   ],
                 ),
-                CircleLayerOptions(
+                CircleLayer(
                   circles: [
                     ..._buildCurrentLocationMarkers(),
                   ],

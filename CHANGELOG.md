@@ -1,3 +1,8 @@
+## [2.0.1] - September 19th, 2022
+
+* Upgraded example to flutter_map 3.0.0
+
+
 ## [2.0.0+14] - August 30, 2022
 
 * Automated dependency updates

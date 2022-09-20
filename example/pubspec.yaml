@@ -3,40 +3,39 @@ description: 'Example project for the Automated Testing Framework.'
 publish_to: 'none'
 version: '1.0.0+12'
 
-environment: 
+environment:
   sdk: '>=2.17.0 <3.0.0'
 
-dependencies: 
+dependencies:
   automated_testing_framework_example: '^2.2.5'
-  automated_testing_framework_plugin_gps: 
+  automated_testing_framework_plugin_gps:
     path: '../'
-  flutter: 
+  flutter:
     sdk: 'flutter'
-  flutter_map: '^2.2.0'
+  flutter_map: '^3.0.0'
 
-dev_dependencies: 
-  flutter_test: 
+dev_dependencies:
+  flutter_test:
     sdk: 'flutter'
 
-
-flutter_icons: 
+flutter_icons:
   android: true
   ios: true
   image_path: 'assets-src/icon.png'
   remove_alpha_ios: true
 
-flutter_native_splash: 
+flutter_native_splash:
   image: 'assets-src/splash.png'
   color: '212121'
   android_disable_fullscreen: true
 
-flutter: 
+flutter:
   uses-material-design: true
-  assets: 
+  assets:
     - 'assets/all_tests.json'
     - 'assets/tests/'
 
-ignore_updates: 
+ignore_updates:
   - 'archive'
   - 'async'
   - 'boolean_selector'
