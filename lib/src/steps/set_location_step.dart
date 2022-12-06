@@ -56,12 +56,12 @@ class SetLocationStep extends TestRunnerStep {
     required TestReport report,
     required TestController tester,
   }) async {
-    var latitude =
+    final latitude =
         JsonClass.parseDouble(tester.resolveVariable(this.latitude))!;
-    var longitude =
+    final longitude =
         JsonClass.parseDouble(tester.resolveVariable(this.longitude))!;
 
-    var name = "$id('$latitude, $longitude')";
+    final name = "$id('$latitude, $longitude')";
 
     log(
       name,

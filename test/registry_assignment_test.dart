@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   test('assert_location_permission', () {
     TestGpsHelper.registerTestSteps();
-    var availStep = TestStepRegistry.instance.getAvailableTestStep(
+    final availStep = TestStepRegistry.instance.getAvailableTestStep(
       AssertLocationPermissionStep.id,
     )!;
 
@@ -25,7 +25,7 @@ void main() {
 
   test('reset_location', () {
     TestGpsHelper.registerTestSteps();
-    var availStep = TestStepRegistry.instance.getAvailableTestStep(
+    final availStep = TestStepRegistry.instance.getAvailableTestStep(
       ResetLocationStep.id,
     )!;
 
@@ -45,7 +45,7 @@ void main() {
 
   test('set_location', () {
     TestGpsHelper.registerTestSteps();
-    var availStep = TestStepRegistry.instance.getAvailableTestStep(
+    final availStep = TestStepRegistry.instance.getAvailableTestStep(
       SetLocationStep.id,
     )!;
 
@@ -65,7 +65,7 @@ void main() {
 
   test('set_location_permission', () {
     TestGpsHelper.registerTestSteps();
-    var availStep = TestStepRegistry.instance.getAvailableTestStep(
+    final availStep = TestStepRegistry.instance.getAvailableTestStep(
       SetLocationPermissionStep.id,
     )!;
 

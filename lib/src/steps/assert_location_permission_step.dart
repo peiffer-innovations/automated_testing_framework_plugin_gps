@@ -52,16 +52,16 @@ class AssertLocationPermissionStep extends TestRunnerStep {
     required TestReport report,
     required TestController tester,
   }) async {
-    var permission = tester.resolveVariable(this.permission);
-    var name = "$id('${permission}')";
+    final permission = tester.resolveVariable(this.permission);
+    final name = "$id('${permission}')";
     log(
       name,
       tester: tester,
     );
 
-    var realPermission = await GpsPlugin().locationPermission;
+    final realPermission = await GpsPlugin().locationPermission;
 
-    var expectedPermission = GpsPlugin().getPermissionForString(permission);
+    final expectedPermission = GpsPlugin().getPermissionForString(permission);
     if (realPermission != expectedPermission) {
       throw Exception(
         'permission: actualValue: [${GpsPlugin().getPermissionString(realPermission)}], expected: [$permission].',

@@ -50,10 +50,10 @@ class SetLocationPermissionStep extends TestRunnerStep {
     required TestReport report,
     required TestController tester,
   }) async {
-    var permission =
+    final permission =
         (tester.resolveVariable(this.permission)?.toString() ?? 'whileInUse');
 
-    var name = "$id('$permission')";
+    final name = "$id('$permission')";
 
     log(
       name,

@@ -21,12 +21,12 @@ class _MapPageState extends State<MapPage> {
   Position? _currentPosition;
 
   Future<void> _moveToMyLocation() async {
-    var plugin = GpsPlugin();
-    var permission = await plugin.requestPermission();
+    final plugin = GpsPlugin();
+    final permission = await plugin.requestPermission();
 
     if (permission == LocationPermission.always ||
         permission == LocationPermission.whileInUse) {
-      var position = await plugin.currentLocation;
+      final position = await plugin.currentLocation;
 
       _currentPosition = position;
       _mapController.move(
@@ -40,10 +40,10 @@ class _MapPageState extends State<MapPage> {
   }
 
   List<CircleMarker> _buildCurrentLocationMarkers() {
-    var markers = <CircleMarker>[];
+    final markers = <CircleMarker>[];
 
     if (_currentPosition != null) {
-      var latLng = LatLng(
+      final latLng = LatLng(
         _currentPosition!.latitude,
         _currentPosition!.longitude,
       );
@@ -74,7 +74,7 @@ class _MapPageState extends State<MapPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Map'),
+        title: const Text('Map'),
       ),
       body: Stack(
         children: <Widget>[
@@ -126,7 +126,7 @@ class _MapPageState extends State<MapPage> {
                           (_mapController.zoom + 1.0).toInt().toDouble(),
                         ),
                       ),
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.zoom_in,
                       ),
                     ),
@@ -141,7 +141,7 @@ class _MapPageState extends State<MapPage> {
                           (_mapController.zoom - 1.0).toInt().toDouble(),
                         ),
                       ),
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.zoom_out,
                       ),
                     ),
@@ -156,7 +156,7 @@ class _MapPageState extends State<MapPage> {
         id: 'button_my_location',
         child: FloatingActionButton(
           onPressed: () => _moveToMyLocation(),
-          child: Icon(
+          child: const Icon(
             Icons.my_location,
           ),
         ),

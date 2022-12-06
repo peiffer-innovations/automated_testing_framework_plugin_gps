@@ -7,11 +7,11 @@ class TestGpsHelper {
   static void registerTestSteps([TestStepRegistry? registry]) {
     (registry ?? TestStepRegistry.instance).registerCustomSteps([
       TestStepBuilder(
-        availableTestStep: AvailableTestStep(
+        availableTestStep: const AvailableTestStep(
           form: AssertLocationPermissionForm(),
           help: TestGpsTranslations.atf_gps_help_assert_location_permission,
           id: AssertLocationPermissionStep.id,
-          keys: const {'permission'},
+          keys: {'permission'},
           quickAddValues: {'permission': 'whileInUse'},
           title: TestGpsTranslations.atf_gps_title_assert_location_permission,
           widgetless: true,
@@ -20,11 +20,11 @@ class TestGpsHelper {
         testRunnerStepBuilder: AssertLocationPermissionStep.fromDynamic,
       ),
       TestStepBuilder(
-        availableTestStep: AvailableTestStep(
+        availableTestStep: const AvailableTestStep(
           form: ResetLocationForm(),
           help: TestGpsTranslations.atf_gps_help_reset_location,
           id: ResetLocationStep.id,
-          keys: const {},
+          keys: {},
           quickAddValues: {},
           title: TestGpsTranslations.atf_gps_title_reset_location,
           widgetless: true,
@@ -33,11 +33,11 @@ class TestGpsHelper {
         testRunnerStepBuilder: ResetLocationStep.fromDynamic,
       ),
       TestStepBuilder(
-        availableTestStep: AvailableTestStep(
+        availableTestStep: const AvailableTestStep(
           form: SetLocationForm(),
           help: TestGpsTranslations.atf_gps_help_set_location,
           id: SetLocationStep.id,
-          keys: const {
+          keys: {
             'latitude',
             'longitude',
           },
@@ -49,11 +49,11 @@ class TestGpsHelper {
         testRunnerStepBuilder: SetLocationStep.fromDynamic,
       ),
       TestStepBuilder(
-        availableTestStep: AvailableTestStep(
+        availableTestStep: const AvailableTestStep(
           form: SetLocationPermissionForm(),
           help: TestGpsTranslations.atf_gps_help_set_location_permission,
           id: SetLocationPermissionStep.id,
-          keys: const {'permission'},
+          keys: {'permission'},
           quickAddValues: {'permission': 'whileInUse'},
           title: TestGpsTranslations.atf_gps_title_set_location_permission,
           widgetless: true,
