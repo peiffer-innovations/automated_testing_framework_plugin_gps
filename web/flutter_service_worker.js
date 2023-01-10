@@ -33,9 +33,9 @@ const RESOURCES = {
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
 "assets/assets/all_tests.json": "7cbfae56de9e0f31ba3957ed89bfe3f5",
 "assets/assets/tests/gps.json": "52e974b2d4d6c54a2b3f405fff01599b",
-"assets/NOTICES": "e8dea3f5d2542056383aaa8287f216ef",
-"index.html": "ea26e2a0393fe36ec4bf573cc0046a10",
-"/": "ea26e2a0393fe36ec4bf573cc0046a10",
+"assets/NOTICES": "7614a6eb8be47d2692753ea649c96c72",
+"index.html": "dcbd976f8301449c0c267fdf34743079",
+"/": "dcbd976f8301449c0c267fdf34743079",
 "favicon.png": "b72ecb27b88d0f05d623684a8ea894e8",
 "version.json": "17562e360f01b7641c74b82e2401e71d"
 };
